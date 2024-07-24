@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+<body>
+   <div id="calculator">
+    <input id="display" readonly>
+    <div id="keys">
+        <button onclick="displayOnScreen('+')" class="operation-button">+</button>
+        <button onclick="displayOnScreen('7')">7</button>
+        <button onclick="displayOnScreen('8')">8</button>
+        <button onclick="displayOnScreen('9')">9</button>
+        <button onclick="displayOnScreen('-')" class="operation-button">-</button>
+        <button onclick="displayOnScreen('4')">4</button>
+        <button onclick="displayOnScreen('5')">5</button>
+        <button onclick="displayOnScreen('6')">6</button>
+        <button onclick="displayOnScreen('*')" class="operation-button">*</button>
+        <button onclick="displayOnScreen('1')">1</button>
+        <button onclick="displayOnScreen('2')">2</button>
+        <button onclick="displayOnScreen('3')">3</button>
+        <button onclick="displayOnScreen('/')" class="operation-button">/</button>
+        <button onclick="displayOnScreen('0')">0</button>
+        <button onclick="displayOnScreen('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="clearScreen()" class="operation-button">C</button>
+
+        <script>
+            const display = document.getElementById("display");
+
+    function displayOnScreen(input){
+        display.value += input;
+    }
+
+    function clearScreen() {
+        display.value = "";
+    }
+
+    function calculate() {
+        display.value = eval(display.value);
+    }
+        </script>
+       
+
+        
+    </div>
+   </div>
+</body>
+</html>
